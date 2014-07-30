@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_refresh"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_action_refresh_white"
+        android:title="Restart"/>
+    <item
+        android:id="@+id/action_preview"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_preview"
+        android:title="Preview"/>
+
+    
+    
+    <item
+        android:id="@+id/action_selectlevel"
+        android:title="@string/select_level">
+        <menu>
+
+    		
+	    </menu>
+	 </item>
+	 
+         <item
+        android:id="@+id/action_settings"
+        android:title="@string/menu_settings"/>
+
+</menu>
