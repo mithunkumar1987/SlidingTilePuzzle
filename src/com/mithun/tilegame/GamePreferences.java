@@ -36,8 +36,9 @@ public class GamePreferences extends PreferenceActivity implements OnSharedPrefe
 	 
 
 	        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-	        builder.setIcon(R.drawable.ic_launcher);
+
 	        builder.setTitle(R.string.about_title);
+	        builder.setIcon(R.drawable.mithun_icon_106_64);
 	        builder.setView(messageView);
 	        builder.create();
 	        builder.show();

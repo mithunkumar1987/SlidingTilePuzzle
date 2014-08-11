@@ -31,38 +31,52 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class drawable {
         public static final int action_settings=0x7f020000;
-        public static final int ic_action_refresh=0x7f020001;
-        public static final int ic_action_refresh_white=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int ic_level=0x7f020004;
-        public static final int ic_preview=0x7f020005;
-        public static final int ic_settings=0x7f020006;
-        public static final int img_0=0x7f020007;
-        public static final int img_1=0x7f020008;
-        public static final int img_2=0x7f020009;
-        public static final int img_3=0x7f02000a;
-        public static final int img_4=0x7f02000b;
-        public static final int rounded_corner=0x7f02000c;
+        public static final int gallery_icon=0x7f020001;
+        public static final int game_icon=0x7f020002;
+        public static final int help_icon_off=0x7f020003;
+        public static final int help_icon_on=0x7f020004;
+        public static final int ic_action_refresh=0x7f020005;
+        public static final int ic_action_refresh_white=0x7f020006;
+        public static final int ic_launcher=0x7f020007;
+        public static final int ic_launcher_title=0x7f020008;
+        public static final int ic_level=0x7f020009;
+        public static final int ic_preview=0x7f02000a;
+        public static final int ic_settings=0x7f02000b;
+        public static final int icon=0x7f02000c;
+        public static final int img_0=0x7f02000d;
+        public static final int img_1=0x7f02000e;
+        public static final int img_2=0x7f02000f;
+        public static final int img_3=0x7f020010;
+        public static final int img_4=0x7f020011;
+        public static final int mithun_icon_106_64=0x7f020012;
+        public static final int rounded_corner=0x7f020013;
     }
     public static final class id {
         public static final int about_credits=0x7f0a0000;
-        public static final int action_preview=0x7f0a0007;
-        public static final int action_refresh=0x7f0a0006;
-        public static final int action_selectlevel=0x7f0a0008;
-        public static final int action_settings=0x7f0a0009;
-        public static final int fullscreen_content=0x7f0a0002;
-        public static final int game_score=0x7f0a0003;
-        public static final int gridview=0x7f0a0001;
-        public static final int preview=0x7f0a0004;
-        public static final int select_level_spinner=0x7f0a0005;
+        public static final int about_support=0x7f0a0001;
+        public static final int action_preview=0x7f0a000d;
+        public static final int action_refresh=0x7f0a000c;
+        public static final int action_selectlevel=0x7f0a000e;
+        public static final int action_settings=0x7f0a000f;
+        public static final int appname=0x7f0a0008;
+        public static final int fullscreen_content=0x7f0a0003;
+        public static final int game_score=0x7f0a0005;
+        public static final int gridview=0x7f0a0002;
+        public static final int image_help=0x7f0a0004;
+        public static final int preview=0x7f0a0006;
+        public static final int select_level_spinner=0x7f0a000b;
+        public static final int splashscreen=0x7f0a000a;
+        public static final int splashscreenlayout=0x7f0a0007;
+        public static final int versiontext=0x7f0a0009;
     }
     public static final class layout {
         public static final int about=0x7f030000;
         public static final int activity_choose_image=0x7f030001;
         public static final int activity_game_screen=0x7f030002;
         public static final int activity_image_preview_dialog=0x7f030003;
-        public static final int game_preferences=0x7f030004;
-        public static final int settings_spinner=0x7f030005;
+        public static final int activity_sliding_tile_puzzle_splash=0x7f030004;
+        public static final int game_preferences=0x7f030005;
+        public static final int settings_spinner=0x7f030006;
     }
     public static final class menu {
         public static final int action_bar=0x7f090000;
@@ -75,10 +89,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int app_credits=0x7f070008;
         public static final int app_descrip=0x7f070007;
         public static final int app_name=0x7f070000;
+        public static final int dummy_button=0x7f07000b;
+        public static final int dummy_content=0x7f07000a;
         public static final int menu_settings=0x7f070001;
         public static final int select_level=0x7f070004;
+        public static final int support=0x7f070009;
         public static final int title_activity_choose_image=0x7f070003;
         public static final int title_activity_image_preview_dialog=0x7f070002;
+        public static final int title_activity_sliding_tile_puzzle_splash=0x7f07000c;
         public static final int version=0x7f070006;
     }
     public static final class style {

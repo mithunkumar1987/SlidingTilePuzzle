@@ -18,6 +18,7 @@ public class GameScreenActivity extends Activity {
 
 	GameCustomView game;
 	SubMenu levelSubMenu;
+
 	final int LEVEL_ITEM_ID = 98765;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class GameScreenActivity extends Activity {
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		FrameLayout frmLayout = (FrameLayout)findViewById(R.id.fullscreen_content);
 	    frmLayout.setFocusable(true);
+	   
 	    
 	    game = new GameCustomView(this);
 	    frmLayout.addView(game);

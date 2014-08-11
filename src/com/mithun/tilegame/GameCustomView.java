@@ -8,7 +8,9 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Paint.Style;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.media.AudioManager;
@@ -16,13 +18,19 @@ import android.media.SoundPool;
 import android.preference.PreferenceManager;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 class GameCustomView extends View{
-	Paint p = new Paint();
+	Paint paint = new Paint();
 	Bitmap mImage = null;
 	Rect dest;
 	Rect src;
+	
+	Rect helpTextBounds;
+	ImageView helpImage;
+	boolean helpNeeded; 
+	
 	int mImageSelected = R.drawable.img_0;
 	int mImageIdxArray[];
 		float touchDownX;
@@ -68,6 +76,26 @@ class GameCustomView extends View{
 		//mPlayer = MediaPlayer.create(context, R.raw.music);
 		dest = new Rect();
 		src = new Rect();
+		helpTextBounds = new Rect();
+		helpImage= (ImageView)((Activity)getContext()).findViewById(R.id.image_help);
+		helpImage.setImageResource(R.drawable.help_icon_off);
+		helpNeeded = false;
+		helpImage.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					helpNeeded=!helpNeeded;
+					System.out.println("image clicked, helpNeeded = "+helpNeeded);
+					
+					if(helpNeeded){
+						helpImage.setImageResource(R.drawable.help_icon_on);
+					}else{
+						helpImage.setImageResource(R.drawable.help_icon_off);
+					}
+					invalidate();
+				}
+			});
+		
 		GameLogic.IMAGE_SPLIT_SIZE = Math.max(getLevelCompletedFromPref(GameLogic.imageSelected)+1,3);
 		GameLogic.moveSound = getMoveSoundFromPref();
 		
@@ -100,11 +128,25 @@ class GameCustomView extends View{
 				srcX*=srcTileSize;
 				srcY*=srcTileSize;
 				src.set(srcX, srcY, srcX+srcTileSize, srcY+srcTileSize);
-				p.setFilterBitmap(true);
+				paint.setFilterBitmap(true);
 				if(img_idx == GameLogic.IMAGE_SPLIT_SIZE*GameLogic.IMAGE_SPLIT_SIZE -1){
-					
+					//don't draw the bottom last corner rectangle 
 				}else{
-				canvas.drawBitmap(mImage, src, dest, p);
+					canvas.drawBitmap(mImage, src, dest, paint);
+					//if help mode is enabled
+					if(helpNeeded){
+						
+						String helpText = Integer.toString(img_idx+1);
+						paint.setTextSize(destTileSize/4);
+						
+			
+						paint.getTextBounds(helpText, 0, helpText.length(), helpTextBounds);
+
+						paint.setColor(Color.RED); 
+						paint.setStyle(Style.FILL); 
+						canvas.drawText(helpText, dest.centerX() - (helpTextBounds.width())/2,
+								                  dest.centerY() , paint);	
+					}
 				}
 			}
 		}

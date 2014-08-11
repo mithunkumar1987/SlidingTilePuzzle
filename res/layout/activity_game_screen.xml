@@ -20,8 +20,20 @@
         android:paddingTop="10dip" >
         </FrameLayout>
      
-     
-     <TextView
+     <RelativeLayout
+         android:layout_width="match_parent"
+    		android:layout_height="wrap_content">
+         <ImageView 
+             android:id="@+id/image_help"
+             android:layout_width="40sp"
+             android:layout_height="40sp"
+             android:padding="5dp"
+             android:src="@drawable/help_icon_off"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentLeft="true"
+             android:layout_margin="15dp"
+             />
+     	<TextView
             android:id="@+id/game_score"
             android:background="@drawable/rounded_corner"
             android:layout_width="wrap_content"
@@ -37,4 +49,6 @@
     		android:paddingLeft="5dp"
     		android:layout_margin="15dp"
     		 />
+     </RelativeLayout>
+     
 </RelativeLayout>

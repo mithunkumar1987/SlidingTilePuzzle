@@ -27,7 +27,11 @@ public class ImageAdapter extends BaseAdapter {
     }
     
     public Integer getImageReference(int position){
-    	return mThumbIds[position];
+    	if(position == mThumbIds.length -1){
+    		return -1;
+    	}else{
+    		return mThumbIds[position];
+    	}
     }
     
     // create a new ImageView for each item referenced by the Adapter
@@ -48,9 +52,11 @@ public class ImageAdapter extends BaseAdapter {
 
     // references to our images
     public Integer[] mThumbIds = {
-            R.drawable.img_0, 
+            R.drawable.img_0,
             R.drawable.img_4,
+            R.drawable.img_3,
             R.drawable.img_1,
-            R.drawable.img_2            
+            R.drawable.img_2,
+            R.drawable.gallery_icon
     };
 }
